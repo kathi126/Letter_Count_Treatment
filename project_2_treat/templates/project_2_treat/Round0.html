@@ -1,0 +1,39 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block styles %}
+    <link href="{% static "project2treat/css/Round.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    Trial Run
+{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron">
+
+<div id="string">
+</div>
+
+<br>
+
+<input type="text" id="player_guess" size="4" autofocus>
+</input> &nbsp;
+<span id="min">00</span>:<span id="sec">00</span>
+&nbsp; Time spent in the current string
+
+<br>
+
+<input type="hidden" name="output0" id="id_output0"/>
+
+</div>
+<div class="next_container">
+    <input class="btn btn-primary btn-large btn-primary next-button" type="submit" value="Continue">
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'project2treat/js/Round0.js' %}"></script>
+{% endblock %}

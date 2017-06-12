@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Feedback Part 1 continued
+{% endblock %}
+
+{% block content %}
+
+   <p>
+        In this period you solved {{ player.output2 }} sequences which earned you {{ player.output2|c }} tokens.<br>
+        You spent {{player.timeinswitcht2}} seconds in the <em>switch mode</em> which earned you {{player.outputinswitch2|c}} tokens.
+    </p>
+    <p>
+        Your total earnings of this period are therefore <strong>{{player.totaloutput2|c}} tokens.</strong>
+    </p>
+
+{% next_button %}
+
+{% endblock %}
