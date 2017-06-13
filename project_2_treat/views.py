@@ -65,7 +65,6 @@ class Waiting8(WaitPage):
         order8 = np.random.choice(5,5,replace=False, p=[p.share8 for p in self.group.get_players()])
         self.session.vars['order8'] = order8
         self.group.set_switch8()
-        self.player.set_output()
         self.group.set_pc8()
 
 class Introduction(Page):
@@ -597,7 +596,10 @@ class Round8a(Page):
 
     def is_displayed(self):
         return self.player.id_in_group == self.session.vars['order7'][0] + 1 or self.player.id_in_group == self.session.vars['order7'][1] + 1
-
+    
+    def before_next_page(self):
+        self.player.set_output()
+        
 class Round8b(Page):
     timeout_seconds = Constants.t
     form_model = models.Player
@@ -638,7 +640,10 @@ class Round8b(Page):
 
     def is_displayed(self):
         return self.player.id_in_group == self.session.vars['order7'][2] + 1 or self.player.id_in_group == self.session.vars['order7'][3] + 1 or self.player.id_in_group == self.session.vars['order7'][4] + 1
-
+    
+    def before_next_page(self):
+        self.player.set_output()
+        
 class Feedback_Round1(Page):
     pass
 
