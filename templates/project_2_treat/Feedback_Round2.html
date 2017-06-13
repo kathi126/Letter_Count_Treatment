@@ -7,13 +7,22 @@
 
 {% block content %}
 
-   <p>
-        In this period you solved {{ player.output2 }} sequences which earned you {{ player.output2|c }} tokens.<br>
-        You spent {{player.timeinswitcht2}} seconds in the <em>switch mode</em> which earned you {{player.outputinswitch2|c}} tokens.
+<div class="panel panel-primary">
+  <div class="panel-heading">Your earnings from this round:</div>
+  <div class="panel-body">
+    You solved {{ player.output2 }} sequences which earns you <strong>{{ player.output2|c }}</strong> Tokens.<br>
+    You spent {{player.timeinswitcht2}} seconds in the <em>switch mode</em> which earns you <strong>{{player.outputinswitch2|c}}</strong> Tokens.<br><br>
+    Your total earnings in this round are therefore <strong>{{player.totaloutput2|c}}</strong> Tokens. <br>
+  </div>
+</div>
+
+<!--   <p>
+        In this round you solved {{ player.output2 }} sequences which earns you <strong>{{ player.output2|c }}</strong> Tokens.<br>
+        You spent {{player.timeinswitcht2}} seconds in the <em>switch mode</em> which earns you <strong>{{player.outputinswitch2|c}}</strong> Tokens.
     </p>
     <p>
-        Your total earnings of this period are therefore <strong>{{player.totaloutput2|c}} tokens.</strong>
-    </p>
+        Your total earnings of this round are therefore <strong>{{player.totaloutput2|c}}</strong> Tokens.
+    </p>  -->
 
 {% next_button %}
 
