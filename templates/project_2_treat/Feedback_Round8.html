@@ -42,19 +42,19 @@ padding: 1em;
 <div class="panel panel-primary">
   <div class="panel-heading"> In this period you solved: </div>
   <div class="panel-body">
-    {{ player.output8 }} strings. Therefore, in this period you earned {{ player.output8|c }}
+    {{ player.output8|floatformat:0 }} strings. Therefore, in this period you earned {{ player.output8|c|floatformat:0 }}
      tokens. <br>
-     For the time spent in switch mode in this period you earned: {{ player.outputinswitch8|c }} tokens. <br>
-    <b>Your total earnings in this period are therefore: {{ player.totaloutput8|c }} tokens.</b> <br>
+     For the time spent in switch mode in this period you earned: {{ player.outputinswitch8|c|floatformat:0 }} tokens. <br>
+    <b>Your total earnings in this period are therefore: {{ player.totaloutput8|c|floatformat:0 }} tokens.</b> <br>
   </div>
 </div>
 <div class="panel panel-primary">
   <div class="panel-heading"> In total you solved: </div>
   <div class="panel-body">
-    {{ player.ouput }} strings. Therefore, in total you earned
-    {{ player.output|c }} tokens. <br>
-    Your earnings from time in switch mode in total are {{ player.outputinswitch|c }} tokens. <br>
-    <b>Your total earnings in the game are therefore {{ player.totaloutput|c }} tokens.</b> <br>
+    {{ player.ouput|floatformat:0 }} strings. Therefore, in total you earned
+    {{ player.output|c|floatformat:0 }} tokens. <br>
+    Your earnings from time in switch mode in total are {{ player.outputinswitch|c|floatformat:0 }} tokens. <br>
+    <b>Your total earnings in the game are therefore {{ player.totaloutput|c|floatformat:0 }} tokens.</b> <br>
   </div>
 </div>
 
@@ -84,31 +84,31 @@ padding: 1em;
   <tr>
     <th class="tg-s6z2">1</th>
     <td class="tg-s6z2">{{ player.role }}</td>
-    <td class="tg-s6z2">{{ player.output8 }}</td>
+    <td class="tg-s6z2">{{ player.output8|floatformat:0 }}</td>
     <td class="tg-s6z2">{{ player.sharepc8|floatformat:2 }} %</td>
   </tr>
   <tr>
     <th class="tg-s6z2">2</th>
     <td class="tg-s6z2">{{ player.get_others_in_group.0.role }}</td>
-    <td class="tg-s6z2">{{ player.get_others_in_group.0.output8 }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.0.output8|floatformat:0 }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.0.sharepc8|floatformat:2 }} %</td>
   </tr>
   <tr>
     <th class="tg-s6z2">3</th>
     <td class="tg-s6z2">{{ player.get_others_in_group.1.role }}</td>
-    <td class="tg-s6z2">{{ player.get_others_in_group.1.output8 }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.1.output8|floatformat:0 }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.1.sharepc8|floatformat:2 }} %</td>
   </tr>
   <tr>
     <th class="tg-s6z2">4</th>
     <td class="tg-s6z2">{{ player.get_others_in_group.2.role }}</td>
-    <td class="tg-s6z2">{{ player.get_others_in_group.2.output8 }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.2.output8|floatformat:0 }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.2.sharepc8|floatformat:2 }} %</td>
   </tr>
   <tr>
     <th class="tg-s6z2">5</th>
     <td class="tg-s6z2">{{ player.get_others_in_group.3.role }}</td>
-    <td class="tg-s6z2">{{ player.get_others_in_group.3.output8 }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.3.output8|floatformat:0 }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.3.sharepc8|floatformat:2 }} %</td>
   </tr>
   <tfoot>
