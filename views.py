@@ -26,7 +26,7 @@ class Waiting3(WaitPage):
         self.session.vars['order3'] = order3
         self.group.set_switch3()
         self.group.set_pc3()
-        for p in self.get_players():
+        for p in self.group.get_players():
             if p.id_in_group == order3[0]:
                 p.rank3 = 1
             if p.id_in_group == order3[1]:
@@ -45,7 +45,7 @@ class Waiting4(WaitPage):
         self.session.vars['order4'] = order4
         self.group.set_switch4()
         self.group.set_pc4()
-        for p in self.get_players():
+        for p in self.group.get_players():
             if p.id_in_group == order4[0]:
                 p.rank4 = 1
             if p.id_in_group == order4[1]:
@@ -64,7 +64,7 @@ class Waiting5(WaitPage):
         self.session.vars['order5'] = order5
         self.group.set_switch5()
         self.group.set_pc5()
-        for p in self.get_players():
+        for p in self.group.get_players():
             if p.id_in_group == order5[0]:
                 p.rank5 = 1
             if p.id_in_group == order5[1]:
@@ -83,7 +83,7 @@ class Waiting6(WaitPage):
         self.session.vars['order6'] = order6
         self.group.set_switch6()
         self.group.set_pc6()
-        for p in self.get_players():
+        for p in self.group.get_players():
             if p.id_in_group == order6[0]:
                 p.rank6 = 1
             if p.id_in_group == order6[1]:
@@ -102,7 +102,7 @@ class Waiting7(WaitPage):
         self.session.vars['order7'] = order7
         self.group.set_switch7()
         self.group.set_pc7()
-        for p in self.get_players():
+        for p in self.group.get_players():
             if p.id_in_group == order7[0]:
                 p.rank7 = 1
             if p.id_in_group == order7[1]:
@@ -121,7 +121,7 @@ class Waiting8(WaitPage):
         self.session.vars['order8'] = order8
         self.group.set_switch8()
         self.group.set_pc8()
-        for p in self.get_players():
+        for p in self.group.get_players():
             if p.id_in_group == order8[0]:
                 p.rank8 = 1
             if p.id_in_group == order8[1]:
