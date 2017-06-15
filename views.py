@@ -46,16 +46,17 @@ class Waiting4(WaitPage):
         self.session.vars['order4'] = order4
         self.group.set_switch4()
         self.group.set_pc4()
+        rank4 = sorted([p.output4 for p in self.group.get_players()], reverse=True)
         for p in self.group.get_players():
-            if p.id_in_group == order4[0] + 1:
+            if p.output4 == rank4[0]:
                 p.rank4 = 1
-            if p.id_in_group == order4[1] + 1:
+            if p.output4 == rank4[1]:
                 p.rank4 = 2
-            if p.id_in_group == order4[2] + 1:
+            if p.output4 == rank4[2]:
                 p.rank4 = 3
-            if p.id_in_group == order4[3] + 1:
+            if p.output4 == rank4[3]:
                 p.rank4 = 4
-            if p.id_in_group == order4[4] + 1:
+            if p.output4 == rank4[4]:
                 p.rank4 = 5
 
 class Waiting5(WaitPage):
@@ -65,16 +66,17 @@ class Waiting5(WaitPage):
         self.session.vars['order5'] = order5
         self.group.set_switch5()
         self.group.set_pc5()
+        rank5 = sorted([p.output5 for p in self.group.get_players()], reverse=True)
         for p in self.group.get_players():
-            if p.id_in_group == order5[0] + 1:
+            if p.output5 == rank5[0]:
                 p.rank5 = 1
-            if p.id_in_group == order5[1] + 1:
+            if p.output5 == rank5[1]:
                 p.rank5 = 2
-            if p.id_in_group == order5[2] + 1:
+            if p.output5 == rank5[2]:
                 p.rank5 = 3
-            if p.id_in_group == order5[3] + 1:
+            if p.output5 == rank5[3]:
                 p.rank5 = 4
-            if p.id_in_group == order5[4] + 1:
+            if p.output5 == rank5[4]:
                 p.rank5 = 5
 
 class Waiting6(WaitPage):
@@ -84,16 +86,17 @@ class Waiting6(WaitPage):
         self.session.vars['order6'] = order6
         self.group.set_switch6()
         self.group.set_pc6()
+        rank6 = sorted([p.output6 for p in self.group.get_players()], reverse=True)
         for p in self.group.get_players():
-            if p.id_in_group == order6[0] + 1:
+            if p.output6 == rank6[0]:
                 p.rank6 = 1
-            if p.id_in_group == order6[1] + 1:
+            if p.output6 == rank6[1]:
                 p.rank6 = 2
-            if p.id_in_group == order6[2] + 1:
+            if p.output6 == rank6[2]:
                 p.rank6 = 3
-            if p.id_in_group == order6[3] + 1:
+            if p.output6 == rank6[3]:
                 p.rank6 = 4
-            if p.id_in_group == order6[4] + 1:
+            if p.output6 == rank6[4]:
                 p.rank6 = 5
 
 class Waiting7(WaitPage):
@@ -103,16 +106,17 @@ class Waiting7(WaitPage):
         self.session.vars['order7'] = order7
         self.group.set_switch7()
         self.group.set_pc7()
+        rank7 = sorted([p.output7 for p in self.group.get_players()], reverse=True)
         for p in self.group.get_players():
-            if p.id_in_group == order7[0] + 1:
+            if p.output7 == rank7[0]:
                 p.rank7 = 1
-            if p.id_in_group == order7[1] + 1:
+            if p.output7 == rank7[1]:
                 p.rank7 = 2
-            if p.id_in_group == order7[2] + 1:
+            if p.output7 == rank7[2]:
                 p.rank7 = 3
-            if p.id_in_group == order7[3] + 1:
+            if p.output7 == rank7[3]:
                 p.rank7 = 4
-            if p.id_in_group == order7[4] + 1:
+            if p.output7 == rank7[4]:
                 p.rank7 = 5
 
 class Waiting8(WaitPage):
@@ -122,16 +126,17 @@ class Waiting8(WaitPage):
         self.session.vars['order8'] = order8
         self.group.set_switch8()
         self.group.set_pc8()
+        rank8 = sorted([p.output8 for p in self.group.get_players()], reverse=True)
         for p in self.group.get_players():
-            if p.id_in_group == order8[0] + 1:
+            if p.output8 == rank8[0]:
                 p.rank8 = 1
-            if p.id_in_group == order8[1] + 1:
+            if p.output8 == rank8[1]:
                 p.rank8 = 2
-            if p.id_in_group == order8[2] + 1:
+            if p.output8 == rank8[2]:
                 p.rank8 = 3
-            if p.id_in_group == order8[3] + 1:
+            if p.output8 == rank8[3]:
                 p.rank8 = 4
-            if p.id_in_group == order8[4] + 1:
+            if p.output8 == rank8[4]:
                 p.rank8 = 5
 
 class Introduction(Page):
