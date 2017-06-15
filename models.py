@@ -25,7 +25,7 @@ class Constants(BaseConstants):
     num_rounds = 1
 
     t = 20
-    tf = 10
+    tf = 400
     tokensper_string = c(1)
     eurosper_token = 0.10
     secondsper_token = 10
@@ -162,21 +162,21 @@ class Group(BaseGroup):
         for p in self.get_players():
             p.sharepc8 = p.share8 * 100
 
-    def set_role(self):
+    def set_letter(self):
         for p in self.get_players():
             if p.id_in_group == 1:
-                p.role = 'A'
+                p.letter = 'A'
             if p.id_in_group == 2:
-                p.role = 'B'
+                p.letter = 'B'
             if p.id_in_group == 3:
-                p.role = 'C'
+                p.letter = 'C'
             if p.id_in_group == 4:
-                p.role = 'D'
+                p.letter = 'D'
             if p.id_in_group == 5:
-                p.role = 'E'
+                p.letter = 'E'
 
 class Player(BasePlayer):
-    role = models.CharField()
+    letter = models.CharField()
     luck = models.PositiveIntegerField(
         choices=[
             [1, 'Not at all'],
