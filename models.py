@@ -207,8 +207,9 @@ class Player(BasePlayer):
         ],
         widget=widgets.RadioSelectHorizontal()
     )
+    # The next variables record the beliefs about the production of other's and the group
     avgbelief3 = models.PositiveIntegerField()
-    mostprodATbelief3 = models.PositiveIntegerField()
+    #there is no advanced technology in round 3
     mostprodBTbelief3 = models.PositiveIntegerField()
     avgbelief4 = models.PositiveIntegerField()
     mostprodATbelief4 = models.PositiveIntegerField()
@@ -225,6 +226,8 @@ class Player(BasePlayer):
     avgbelief8 = models.PositiveIntegerField()
     mostprodATbelief8 = models.PositiveIntegerField()
     mostprodBTbelief8 = models.PositiveIntegerField()
+
+    #the next variables record the number of sequences solved
     output = models.PositiveIntegerField(default=0)
     output0 = models.PositiveIntegerField(default=0)
     output1 = models.PositiveIntegerField(default=0)
@@ -235,6 +238,8 @@ class Player(BasePlayer):
     output6 = models.PositiveIntegerField(default=0)
     output7 = models.PositiveIntegerField(default=0)
     output8 = models.PositiveIntegerField(default=0)
+
+
     share3 = models.FloatField(default=0)
     share4 = models.FloatField(default=0)
     share5 = models.FloatField(default=0)
