@@ -13,8 +13,8 @@ class Welcome(Page):
     pass
 
 class Welcome_wait(WaitPage):
-    def after_all_groups_arrive(self):
-        self.group.set_role()
+    def after_all_players_arrive(self):
+        self.group.set_letter()
 
 class Waiting(WaitPage):
     pass
@@ -26,6 +26,18 @@ class Waiting3(WaitPage):
         self.session.vars['order3'] = order3
         self.group.set_switch3()
         self.group.set_pc3()
+        rank3 = sorted([p.output3 for p in self.group.get_players()], reverse=True)
+        for p in self.group.get_players():
+            if p.output3 == rank3[4]:
+                p.rank3 = 5
+            if p.output3 == rank3[3]:
+                p.rank3 = 4
+            if p.output3 == rank3[2]:
+                p.rank3 = 3
+            if p.output3 == rank3[1]:
+                p.rank3 = 2
+            if p.output3 == rank3[0]:
+                p.rank3 = 1
 
 class Waiting4(WaitPage):
     def after_all_players_arrive(self):
@@ -34,6 +46,18 @@ class Waiting4(WaitPage):
         self.session.vars['order4'] = order4
         self.group.set_switch4()
         self.group.set_pc4()
+        rank4 = sorted([p.output4 for p in self.group.get_players()], reverse=True)
+        for p in self.group.get_players():
+            if p.output4 == rank4[4]:
+                p.rank4 = 5
+            if p.output4 == rank4[3]:
+                p.rank4 = 4
+            if p.output4 == rank4[2]:
+                p.rank4 = 3
+            if p.output4 == rank4[1]:
+                p.rank4 = 2
+            if p.output4 == rank4[0]:
+                p.rank4 = 1
 
 class Waiting5(WaitPage):
     def after_all_players_arrive(self):
@@ -42,6 +66,18 @@ class Waiting5(WaitPage):
         self.session.vars['order5'] = order5
         self.group.set_switch5()
         self.group.set_pc5()
+        rank5 = sorted([p.output5 for p in self.group.get_players()], reverse=True)
+        for p in self.group.get_players():
+            if p.output5 == rank5[4]:
+                p.rank5 = 5
+            if p.output5 == rank5[3]:
+                p.rank5 = 4
+            if p.output5 == rank5[2]:
+                p.rank5 = 3
+            if p.output5 == rank5[1]:
+                p.rank5 = 2
+            if p.output5 == rank5[0]:
+                p.rank5 = 1
 
 class Waiting6(WaitPage):
     def after_all_players_arrive(self):
@@ -50,6 +86,18 @@ class Waiting6(WaitPage):
         self.session.vars['order6'] = order6
         self.group.set_switch6()
         self.group.set_pc6()
+        rank6 = sorted([p.output6 for p in self.group.get_players()], reverse=True)
+        for p in self.group.get_players():
+            if p.output6 == rank6[4]:
+                p.rank6 = 5
+            if p.output6 == rank6[3]:
+                p.rank6 = 4
+            if p.output6 == rank6[2]:
+                p.rank6 = 3
+            if p.output6 == rank6[1]:
+                p.rank6 = 2
+            if p.output6 == rank6[0]:
+                p.rank6 = 1
 
 class Waiting7(WaitPage):
     def after_all_players_arrive(self):
@@ -58,6 +106,18 @@ class Waiting7(WaitPage):
         self.session.vars['order7'] = order7
         self.group.set_switch7()
         self.group.set_pc7()
+        rank7 = sorted([p.output7 for p in self.group.get_players()], reverse=True)
+        for p in self.group.get_players():
+            if p.output7 == rank7[4]:
+                p.rank7 = 5
+            if p.output7 == rank7[3]:
+                p.rank7 = 4
+            if p.output7 == rank7[2]:
+                p.rank7 = 3
+            if p.output7 == rank7[1]:
+                p.rank7 = 2
+            if p.output7 == rank7[0]:
+                p.rank7 = 1
 
 class Waiting8(WaitPage):
     def after_all_players_arrive(self):
@@ -66,6 +126,18 @@ class Waiting8(WaitPage):
         self.session.vars['order8'] = order8
         self.group.set_switch8()
         self.group.set_pc8()
+        rank8 = sorted([p.output8 for p in self.group.get_players()], reverse=True)
+        for p in self.group.get_players():
+            if p.output8 == rank8[4]:
+                p.rank8 = 5
+            if p.output8 == rank8[3]:
+                p.rank8 = 4
+            if p.output8 == rank8[2]:
+                p.rank8 = 3
+            if p.output8 == rank8[1]:
+                p.rank8 = 2
+            if p.output8 == rank8[0]:
+                p.rank8 = 1
 
 class Introduction(Page):
     pass
@@ -225,6 +297,10 @@ class Round3(Page):
                    'additionaltime3'
                    ]
 
+    def before_next_page(self):
+        if self.player.output3 == 0:
+            self.player.output3 = 0.0000001
+
 class Round4a(Page):
     timeout_seconds = Constants.t
     form_model = models.Player
@@ -266,6 +342,10 @@ class Round4a(Page):
     def is_displayed(self):
         return self.player.id_in_group == self.session.vars['order3'][0] + 1 or self.player.id_in_group == self.session.vars['order3'][1] + 1
 
+    def before_next_page(self):
+        if self.player.output4 == 0:
+            self.player.output4 = 0.0000001
+
 class Round4b(Page):
     timeout_seconds = Constants.t
     form_model = models.Player
@@ -305,6 +385,10 @@ class Round4b(Page):
                    ]
     def is_displayed(self):
         return self.player.id_in_group == self.session.vars['order3'][2] + 1 or self.player.id_in_group == self.session.vars['order3'][3] + 1 or self.player.id_in_group == self.session.vars['order3'][4] + 1
+
+    def before_next_page(self):
+        if self.player.output4 == 0:
+            self.player.output4 = 0.0000001
 
 class Round5a(Page):
     timeout_seconds = Constants.t
@@ -347,6 +431,9 @@ class Round5a(Page):
     def is_displayed(self):
         return self.player.id_in_group == self.session.vars['order4'][0] + 1 or self.player.id_in_group == self.session.vars['order4'][1] + 1
 
+    def before_next_page(self):
+        if self.player.output5 == 0:
+            self.player.output5 = 0.0000001
 
 class Round5b(Page):
     timeout_seconds = Constants.t
@@ -389,6 +476,9 @@ class Round5b(Page):
     def is_displayed(self):
         return self.player.id_in_group == self.session.vars['order4'][2] + 1 or self.player.id_in_group == self.session.vars['order4'][3] + 1 or self.player.id_in_group == self.session.vars['order4'][4] + 1
 
+    def before_next_page(self):
+        if self.player.output5 == 0:
+            self.player.output5 = 0.0000001
 
 class Round6a(Page):
     timeout_seconds = Constants.t
@@ -431,6 +521,9 @@ class Round6a(Page):
     def is_displayed(self):
         return self.player.id_in_group == self.session.vars['order5'][0] + 1 or self.player.id_in_group == self.session.vars['order5'][1] + 1
 
+    def before_next_page(self):
+        if self.player.output6 == 0:
+            self.player.output6 = 0.0000001
 
 class Round6b(Page):
     timeout_seconds = Constants.t
@@ -473,6 +566,9 @@ class Round6b(Page):
     def is_displayed(self):
         return self.player.id_in_group == self.session.vars['order5'][2] + 1 or self.player.id_in_group == self.session.vars['order5'][3] + 1 or self.player.id_in_group == self.session.vars['order5'][4] + 1
 
+    def before_next_page(self):
+        if self.player.output6 == 0:
+            self.player.output6 = 0.0000001
 
 class Round7a(Page):
     timeout_seconds = Constants.t
@@ -515,6 +611,10 @@ class Round7a(Page):
     def is_displayed(self):
         return self.player.id_in_group == self.session.vars['order6'][0] + 1 or self.player.id_in_group == self.session.vars['order6'][1] + 1
 
+    def before_next_page(self):
+        if self.player.output7 == 0:
+            self.player.output7 = 0.0000001
+
 class Round7b(Page):
     timeout_seconds = Constants.t
     form_model = models.Player
@@ -555,6 +655,10 @@ class Round7b(Page):
 
     def is_displayed(self):
         return self.player.id_in_group == self.session.vars['order6'][2] + 1 or self.player.id_in_group == self.session.vars['order6'][3] + 1 or self.player.id_in_group == self.session.vars['order6'][4] + 1
+
+    def before_next_page(self):
+        if self.player.output7 == 0:
+            self.player.output7 = 0.0000001
 
 class Round8a(Page):
     timeout_seconds = Constants.t
@@ -598,6 +702,8 @@ class Round8a(Page):
         return self.player.id_in_group == self.session.vars['order7'][0] + 1 or self.player.id_in_group == self.session.vars['order7'][1] + 1
     
     def before_next_page(self):
+        if self.player.output8 == 0:
+            self.player.output8 = 0.0000001
         self.player.set_output()
         
 class Round8b(Page):
@@ -642,6 +748,8 @@ class Round8b(Page):
         return self.player.id_in_group == self.session.vars['order7'][2] + 1 or self.player.id_in_group == self.session.vars['order7'][3] + 1 or self.player.id_in_group == self.session.vars['order7'][4] + 1
     
     def before_next_page(self):
+        if self.player.output8 == 0:
+            self.player.output8 = 0.0000001
         self.player.set_output()
 
 class Feedback_Round1(Page):

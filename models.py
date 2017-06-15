@@ -25,7 +25,7 @@ class Constants(BaseConstants):
     num_rounds = 1
 
     t = 20
-    tf = 10
+    tf = 400
     tokensper_string = c(1)
     eurosper_token = 0.10
     secondsper_token = 10
@@ -35,12 +35,12 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    groupoutput3 = models.PositiveIntegerField(default=1)
-    groupoutput4 = models.PositiveIntegerField(default=1)
-    groupoutput5 = models.PositiveIntegerField(default=1)
-    groupoutput6 = models.PositiveIntegerField(default=1)
-    groupoutput7 = models.PositiveIntegerField(default=1)
-    groupoutput8 = models.PositiveIntegerField(default=1)
+    groupoutput3 = models.FloatField(default=1)
+    groupoutput4 = models.FloatField(default=1)
+    groupoutput5 = models.FloatField(default=1)
+    groupoutput6 = models.FloatField(default=1)
+    groupoutput7 = models.FloatField(default=1)
+    groupoutput8 = models.FloatField(default=1)
 
     def set_output3(self):
         self.groupoutput3 = sum([p.output3 for p in self.get_players()])
@@ -162,21 +162,21 @@ class Group(BaseGroup):
         for p in self.get_players():
             p.sharepc8 = p.share8 * 100
 
-    def set_role(self):
+    def set_letter(self):
         for p in self.get_players():
             if p.id_in_group == 1:
-                p.role = 'A'
+                p.letter = 'A'
             if p.id_in_group == 2:
-                p.role = 'B'
+                p.letter = 'B'
             if p.id_in_group == 3:
-                p.role = 'C'
+                p.letter = 'C'
             if p.id_in_group == 4:
-                p.role = 'D'
+                p.letter = 'D'
             if p.id_in_group == 5:
-                p.role = 'E'
+                p.letter = 'E'
 
 class Player(BasePlayer):
-    role = models.CharField()
+    letter = models.CharField()
     luck = models.PositiveIntegerField(
         choices=[
             [1, 'Not at all'],
@@ -227,19 +227,23 @@ class Player(BasePlayer):
     mostprodATbelief8 = models.PositiveIntegerField()
     mostprodBTbelief8 = models.PositiveIntegerField()
 
-    #the next variables record the number of sequences solved
-    output = models.PositiveIntegerField(default=0)
-    output0 = models.PositiveIntegerField(default=0)
-    output1 = models.PositiveIntegerField(default=0)
-    output2 = models.PositiveIntegerField(default=0)
-    output3 = models.PositiveIntegerField(default=0)
-    output4 = models.PositiveIntegerField(default=0)
-    output5 = models.PositiveIntegerField(default=0)
-    output6 = models.PositiveIntegerField(default=0)
-    output7 = models.PositiveIntegerField(default=0)
-    output8 = models.PositiveIntegerField(default=0)
-
-
+    # the next variables record the number of sequences solved
+    output = models.FloatField(default=0)
+    output0 = models.FloatField(default=0)
+    output1 = models.FloatField(default=0)
+    output2 = models.FloatField(default=0)
+    output3 = models.FloatField(default=0)
+    output4 = models.FloatField(default=0)
+    output5 = models.FloatField(default=0)
+    output6 = models.FloatField(default=0)
+    output7 = models.FloatField(default=0)
+    output8 = models.FloatField(default=0)
+    rank3 = models.PositiveIntegerField()
+    rank4 = models.PositiveIntegerField()
+    rank5 = models.PositiveIntegerField()
+    rank6 = models.PositiveIntegerField()
+    rank7 = models.PositiveIntegerField()
+    rank8 = models.PositiveIntegerField()
     share3 = models.FloatField(default=0)
     share4 = models.FloatField(default=0)
     share5 = models.FloatField(default=0)

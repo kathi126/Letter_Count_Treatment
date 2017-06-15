@@ -50,10 +50,10 @@ padding: 1em;
 <div class="panel panel-primary">
   <div class="panel-heading"> In this period you solved: </div>
   <div class="panel-body">
-    {{ player.output7 }} strings. Therefore, in this period you earned
-    {{ player.output7|c }} tokens. <br>
-     For the time spent in switch mode in this period you earned: {{player.outputinswitch7|c}} tokens. <br>
-    <b>Your total earnings in this period are therefore: {{player.totaloutput7|c}} tokens.</b> <br>
+    {{ player.output7|floatformat:0 }} strings. Therefore, in this period you earned
+    {{ player.output7|c|floatformat:0 }} tokens. <br>
+     For the time spent in switch mode in this period you earned: {{ player.outputinswitch7|c|floatformat:0 }} tokens. <br>
+    <b>Your total earnings in this period are therefore: {{ player.totaloutput7|c|floatformat:0 }} tokens.</b> <br>
   </div>
 </div>
 
@@ -69,7 +69,7 @@ padding: 1em;
   </div>
 
 <!-- Begin Table -->
-<table class="table" id="table7">
+<table class="table" id="table">
 
   <tr>
     <th class="tg-s6z2">Rank</th>
@@ -78,38 +78,38 @@ padding: 1em;
     <th class="tg-s6z2">Share of Group Production**</th>
   </tr>
   <tr>
-    <th class="tg-s6z2">1</th>
-    <td class="tg-s6z2">{{ player.role }}</td>
-    <td class="tg-s6z2">{{ player.output7 }}</td>
-    <td class="tg-s6z2">{{ player.sharepc7|floatformat:2 }} %</td>
+    <td class="tg-s6z2">{{ player.rank7 }}</td>
+    <td class="tg-s6z2">{{ player.letter }}</td>
+    <td class="tg-s6z2">{{ player.output7|floatformat:0 }}</td>
+    <td class="tg-s6z2">{{ player.sharepc7|floatformat:0 }} %</td>
   </tr>
   <tr>
-    <th class="tg-s6z2">2</th>
-    <td class="tg-s6z2">{{ player.get_others_in_group.0.role }}</td>
-    <td class="tg-s6z2">{{ player.get_others_in_group.0.output7 }}</td>
-    <td class="tg-s6z2">{{ player.get_others_in_group.0.sharepc7|floatformat:2 }} %</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.0.rank7 }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.0.letter }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.0.output7|floatformat:0 }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.0.sharepc7|floatformat:0 }} %</td>
   </tr>
   <tr>
-    <th class="tg-s6z2">3</th>
-    <td class="tg-s6z2">{{ player.get_others_in_group.1.role }}</td>
-    <td class="tg-s6z2">{{ player.get_others_in_group.1.output7 }}</td>
-    <td class="tg-s6z2">{{ player.get_others_in_group.1.sharepc7|floatformat:2 }} %</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.1.rank7 }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.1.letter }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.1.output7|floatformat:0 }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.1.sharepc7|floatformat:0 }} %</td>
   </tr>
   <tr>
-    <th class="tg-s6z2">4</th>
-    <td class="tg-s6z2">{{ player.get_others_in_group.2.role }}</td>
-    <td class="tg-s6z2">{{ player.get_others_in_group.2.output7 }}</td>
-    <td class="tg-s6z2">{{ player.get_others_in_group.2.sharepc7|floatformat:2 }} %</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.2.rank7 }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.2.letter }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.2.output7|floatformat:0 }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.2.sharepc7|floatformat:0 }} %</td>
   </tr>
   <tr>
-    <th class="tg-s6z2">5</th>
-    <td class="tg-s6z2">{{ player.get_others_in_group.3.role }}</td>
-    <td class="tg-s6z2">{{ player.get_others_in_group.3.output7 }}</td>
-    <td class="tg-s6z2">{{ player.get_others_in_group.3.sharepc7|floatformat:2 }} %</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.3.rank7 }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.3.letter }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.3.output7|floatformat:0 }}</td>
+    <td class="tg-s6z2">{{ player.get_others_in_group.3.sharepc7|floatformat:0 }} %</td>
   </tr>
   <tfoot>
   <tr>
-    <th class="tg-s6z2" colspan="2">Total</th>
+    <td class="tg-s6z2" colspan="2">Total</td>
     <td class="tg-s6z2"></td>
     <td class="tg-s6z2">100%</td>
   </tr>
@@ -127,4 +127,8 @@ padding: 1em;
 <!-- End Table -->
  {% next_button %}
 
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static "project2treat/js/tablesort.js" %}"></script>
 {% endblock %}
