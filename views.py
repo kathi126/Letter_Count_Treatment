@@ -227,7 +227,7 @@ class Round3(Page):
 
     def before_next_page(self):
         if self.player.output3 == 0:
-            self.player.output3 = 0.001
+            self.player.output3 = 0.0000001
 
 class Round4a(Page):
     timeout_seconds = Constants.t
@@ -272,7 +272,7 @@ class Round4a(Page):
 
     def before_next_page(self):
         if self.player.output4 == 0:
-            self.player.output4 = 0.001
+            self.player.output4 = 0.0000001
 
 class Round4b(Page):
     timeout_seconds = Constants.t
@@ -316,7 +316,7 @@ class Round4b(Page):
 
     def before_next_page(self):
         if self.player.output4 == 0:
-            self.player.output4 = 0.001
+            self.player.output4 = 0.0000001
 
 class Round5a(Page):
     timeout_seconds = Constants.t
@@ -361,7 +361,7 @@ class Round5a(Page):
 
     def before_next_page(self):
         if self.player.output5 == 0:
-            self.player.output5 = 0.001
+            self.player.output5 = 0.0000001
 
 class Round5b(Page):
     timeout_seconds = Constants.t
@@ -406,7 +406,7 @@ class Round5b(Page):
 
     def before_next_page(self):
         if self.player.output5 == 0:
-            self.player.output5 = 0.001
+            self.player.output5 = 0.0000001
 
 class Round6a(Page):
     timeout_seconds = Constants.t
@@ -451,7 +451,7 @@ class Round6a(Page):
 
     def before_next_page(self):
         if self.player.output6 == 0:
-            self.player.output6 = 0.001
+            self.player.output6 = 0.0000001
 
 class Round6b(Page):
     timeout_seconds = Constants.t
@@ -496,7 +496,7 @@ class Round6b(Page):
 
     def before_next_page(self):
         if self.player.output6 == 0:
-            self.player.output6 = 0.001
+            self.player.output6 = 0.0000001
 
 class Round7a(Page):
     timeout_seconds = Constants.t
@@ -541,7 +541,7 @@ class Round7a(Page):
 
     def before_next_page(self):
         if self.player.output7 == 0:
-            self.player.output7 = 0.001
+            self.player.output7 = 0.0000001
 
 class Round7b(Page):
     timeout_seconds = Constants.t
@@ -586,7 +586,7 @@ class Round7b(Page):
 
     def before_next_page(self):
         if self.player.output7 == 0:
-            self.player.output7 = 0.001
+            self.player.output7 = 0.0000001
 
 class Round8a(Page):
     timeout_seconds = Constants.t
@@ -631,7 +631,7 @@ class Round8a(Page):
     
     def before_next_page(self):
         if self.player.output8 == 0:
-            self.player.output8 = 0.001
+            self.player.output8 = 0.0000001
         self.player.set_output()
         
 class Round8b(Page):
@@ -677,7 +677,7 @@ class Round8b(Page):
     
     def before_next_page(self):
         if self.player.output8 == 0:
-            self.player.output8 = 0.001
+            self.player.output8 = 0.0000001
         self.player.set_output()
 
 class Feedback_Round1(Page):
