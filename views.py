@@ -26,16 +26,17 @@ class Waiting3(WaitPage):
         self.session.vars['order3'] = order3
         self.group.set_switch3()
         self.group.set_pc3()
+        rank3 = sorted([p.output3 for p in self.group.get_players()], reverse=True)
         for p in self.group.get_players():
-            if p.id_in_group == order3[0] + 1:
+            if p.output3 == rank3[0]:
                 p.rank3 = 1
-            if p.id_in_group == order3[1] + 1:
+            if p.output3 == rank3[1]:
                 p.rank3 = 2
-            if p.id_in_group == order3[2] + 1:
+            if p.output3 == rank3[2]:
                 p.rank3 = 3
-            if p.id_in_group == order3[3] + 1:
+            if p.output3 == rank3[3]:
                 p.rank3 = 4
-            if p.id_in_group == order3[4] + 1:
+            if p.output3 == rank3[4]:
                 p.rank3 = 5
 
 class Waiting4(WaitPage):
