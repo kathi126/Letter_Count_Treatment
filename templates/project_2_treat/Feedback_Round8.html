@@ -73,7 +73,7 @@ padding: 1em;
 
 
 <!-- Begin Table -->
-<table class="table" id="table8">
+<table class="table" id="table">
 
   <tr>
     <th class="tg-s6z2">Rank</th>
@@ -82,38 +82,38 @@ padding: 1em;
     <th class="tg-s6z2">Share of Group Production**</th>
   </tr>
   <tr>
-    <th class="tg-s6z2">{{ player.rank8 }}</th>
+    <td class="tg-s6z2">{{ player.rank8 }}</td>
     <td class="tg-s6z2">{{ player.letter }}</td>
     <td class="tg-s6z2">{{ player.output8|floatformat:0 }}</td>
     <td class="tg-s6z2">{{ player.sharepc8|floatformat:0 }} %</td>
   </tr>
   <tr>
-    <th class="tg-s6z2">{{ player.get_others_in_group.0.rank8 }}</th>
+    <td class="tg-s6z2">{{ player.get_others_in_group.0.rank8 }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.0.letter }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.0.output8|floatformat:0 }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.0.sharepc8|floatformat:0 }} %</td>
   </tr>
   <tr>
-    <th class="tg-s6z2">{{ player.get_others_in_group.1.rank8 }}</th>
+    <td class="tg-s6z2">{{ player.get_others_in_group.1.rank8 }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.1.letter }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.1.output8|floatformat:0 }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.1.sharepc8|floatformat:0 }} %</td>
   </tr>
   <tr>
-    <th class="tg-s6z2">{{ player.get_others_in_group.2.rank8 }}</th>
+    <td class="tg-s6z2">{{ player.get_others_in_group.2.rank8 }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.2.letter }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.2.output8|floatformat:0 }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.2.sharepc8|floatformat:0 }} %</td>
   </tr>
   <tr>
-    <th class="tg-s6z2">{{ player.get_others_in_group.3.rank8 }}</th>
+    <td class="tg-s6z2">{{ player.get_others_in_group.3.rank8 }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.3.letter }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.3.output8|floatformat:0 }}</td>
     <td class="tg-s6z2">{{ player.get_others_in_group.3.sharepc8|floatformat:0 }} %</td>
   </tr>
   <tfoot>
   <tr>
-    <th class="tg-s6z2" colspan="2">Total</th>
+    <td class="tg-s6z2" colspan="2">Total</td>
     <td class="tg-s6z2"></td>
     <td class="tg-s6z2">100%</td>
   </tr>
@@ -138,4 +138,8 @@ padding: 1em;
 
 {% next_button %}
 
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static "project2treat/js/tablesort.js" %}"></script>
 {% endblock %}
