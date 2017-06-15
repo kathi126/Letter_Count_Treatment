@@ -15,15 +15,17 @@
 Please answer the following questions:
     <br>
     <br>
+<ol type="1"> <!-- This starts a numbered list -->
 
-    {% formfield player.avgbelief7 with label="What do you think will be <u>the average number</u> of strings solved in this round by your group?" %}
+   <li> {% formfield player.avgbelief7 with label="What do you think will be <u>the average number</u> of strings solved in this round by your group?" %} </li>
 
     <br>
 
-    {% formfield player.mostprodATbelief7 with label="How many strings do you think will the most productive member of your group solve in this period, if her or she got the <u> advanced technology</u>?" %}
-    {% formfield player.mostprodBTbelief7 with label="How many strings do you think will the most productive member of your group solve in this period, if her or she got the <u> basic technology</u>?" %}
+   <li> {% formfield player.mostprodATbelief7 with label="How many strings do you think will the most productive member of your group solve in this period, if her or she got the <u> advanced technology</u>?" %} </li>
 
+    <li> {% formfield player.mostprodBTbelief7 with label="How many strings do you think will the most productive member of your group solve in this period, if her or she got the <u> basic technology</u>?" %} </li>
 
+</ol>
 
 
 <!--
