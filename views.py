@@ -14,7 +14,7 @@ class Welcome(Page):
 
 class Welcome_wait(WaitPage):
     def after_all_groups_arrive(self):
-        self.group.set_role()
+        self.group.set_letter()
 
 class Waiting(WaitPage):
     pass
