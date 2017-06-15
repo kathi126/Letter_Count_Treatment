@@ -162,21 +162,20 @@ class Group(BaseGroup):
         for p in self.get_players():
             p.sharepc8 = p.share8 * 100
 
-    def set_letter(self):
+    def set_role(self):
         for p in self.get_players():
             if p.id_in_group == 1:
-                p.letter = 'A'
+                p.role = 'A'
             if p.id_in_group == 2:
-                p.letter = 'B'
+                p.role = 'B'
             if p.id_in_group == 3:
-                p.letter = 'C'
+                p.role = 'C'
             if p.id_in_group == 4:
-                p.letter = 'D'
+                p.role = 'D'
             if p.id_in_group == 5:
-                p.letter = 'E'
+                p.role = 'E'
 
 class Player(BasePlayer):
-    letter = models.CharField()
     luck = models.PositiveIntegerField(
         choices=[
             [1, 'Not at all'],
