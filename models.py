@@ -235,7 +235,6 @@ class Player(BasePlayer):
     output6 = models.FloatField(default=0)
     output7 = models.FloatField(default=0)
     output8 = models.FloatField(default=0)
-    rank = models.PositiveIntegerField()
     rank3 = models.PositiveIntegerField()
     rank4 = models.PositiveIntegerField()
     rank5 = models.PositiveIntegerField()
