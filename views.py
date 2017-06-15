@@ -26,6 +26,17 @@ class Waiting3(WaitPage):
         self.session.vars['order3'] = order3
         self.group.set_switch3()
         self.group.set_pc3()
+        for p in self.get_players():
+            if p.id_in_group == order3[0]:
+                p.rank3 = 1
+            if p.id_in_group == order3[1]:
+                p.rank3 = 2
+            if p.id_in_group == order3[2]:
+                p.rank3 = 3
+            if p.id_in_group == order3[3]:
+                p.rank3 = 4
+            if p.id_in_group == order3[4]:
+                p.rank3 = 5
 
 class Waiting4(WaitPage):
     def after_all_players_arrive(self):
@@ -34,6 +45,17 @@ class Waiting4(WaitPage):
         self.session.vars['order4'] = order4
         self.group.set_switch4()
         self.group.set_pc4()
+        for p in self.get_players():
+            if p.id_in_group == order4[0]:
+                p.rank4 = 1
+            if p.id_in_group == order4[1]:
+                p.rank4 = 2
+            if p.id_in_group == order4[2]:
+                p.rank4 = 3
+            if p.id_in_group == order4[3]:
+                p.rank4 = 4
+            if p.id_in_group == order4[4]:
+                p.rank4 = 5
 
 class Waiting5(WaitPage):
     def after_all_players_arrive(self):
@@ -42,6 +64,17 @@ class Waiting5(WaitPage):
         self.session.vars['order5'] = order5
         self.group.set_switch5()
         self.group.set_pc5()
+        for p in self.get_players():
+            if p.id_in_group == order5[0]:
+                p.rank5 = 1
+            if p.id_in_group == order5[1]:
+                p.rank5 = 2
+            if p.id_in_group == order5[2]:
+                p.rank5 = 3
+            if p.id_in_group == order5[3]:
+                p.rank5 = 4
+            if p.id_in_group == order5[4]:
+                p.rank5 = 5
 
 class Waiting6(WaitPage):
     def after_all_players_arrive(self):
@@ -50,6 +83,17 @@ class Waiting6(WaitPage):
         self.session.vars['order6'] = order6
         self.group.set_switch6()
         self.group.set_pc6()
+        for p in self.get_players():
+            if p.id_in_group == order6[0]:
+                p.rank6 = 1
+            if p.id_in_group == order6[1]:
+                p.rank6 = 2
+            if p.id_in_group == order6[2]:
+                p.rank6 = 3
+            if p.id_in_group == order6[3]:
+                p.rank6 = 4
+            if p.id_in_group == order6[4]:
+                p.rank6 = 5
 
 class Waiting7(WaitPage):
     def after_all_players_arrive(self):
@@ -58,6 +102,17 @@ class Waiting7(WaitPage):
         self.session.vars['order7'] = order7
         self.group.set_switch7()
         self.group.set_pc7()
+        for p in self.get_players():
+            if p.id_in_group == order7[0]:
+                p.rank7 = 1
+            if p.id_in_group == order7[1]:
+                p.rank7 = 2
+            if p.id_in_group == order7[2]:
+                p.rank7 = 3
+            if p.id_in_group == order7[3]:
+                p.rank7 = 4
+            if p.id_in_group == order7[4]:
+                p.rank7 = 5
 
 class Waiting8(WaitPage):
     def after_all_players_arrive(self):
@@ -66,6 +121,17 @@ class Waiting8(WaitPage):
         self.session.vars['order8'] = order8
         self.group.set_switch8()
         self.group.set_pc8()
+        for p in self.get_players():
+            if p.id_in_group == order8[0]:
+                p.rank8 = 1
+            if p.id_in_group == order8[1]:
+                p.rank8 = 2
+            if p.id_in_group == order8[2]:
+                p.rank8 = 3
+            if p.id_in_group == order8[3]:
+                p.rank8 = 4
+            if p.id_in_group == order8[4]:
+                p.rank8 = 5
 
 class Introduction(Page):
     pass
