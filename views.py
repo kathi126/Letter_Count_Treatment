@@ -856,7 +856,7 @@ page_sequence = [
    Welcome_wait,
    Introduction,
    Task_Instructions,
-#   Round0,
+   Round0,
    Waiting,
    Switch_Instructions,
    Round1,
