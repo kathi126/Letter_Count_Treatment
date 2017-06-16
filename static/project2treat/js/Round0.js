@@ -79,6 +79,9 @@ me.makeguess = function(x) {
         pattern.classList.add("hidden");
         var next = document.getElementsByClassName("next-button");
         next[0].classList.remove("hidden");
+        // displays text after solving all trial sequences
+        var donetextvar = document.getElementById("done_text");
+        donetextvar.innerHTML = "<p>You finished the trial round. Please click <i>Continue</i>.</p>";
     } else {
         me.index = x;
 
