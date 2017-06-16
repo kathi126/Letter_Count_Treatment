@@ -44,8 +44,8 @@ padding: 1em;
   <div class="panel-body">
     {{ player.output8|floatformat:0 }} strings. Therefore, in this period you earned {{ player.output8|c|floatformat:0 }}
      tokens. <br>
-     For the time spent in switch mode in this period you earned: {{ player.outputinswitch8|c|floatformat:0 }} tokens. <br>
-    <b>Your total earnings in this period are therefore: {{ player.totaloutput8|c|floatformat:0 }} tokens.</b> <br>
+     For the time spent in switch mode in this period you earned: {{ player.outputinswitch8|c|floatformat:1 }} tokens. <br>
+    <b>Your total earnings in this period are therefore: {{ player.totaloutput8|c|floatformat:1 }} tokens.</b> <br>
   </div>
 </div>
 <div class="panel panel-primary">
@@ -53,8 +53,8 @@ padding: 1em;
   <div class="panel-body">
     {{ player.ouput|floatformat:0 }} strings. Therefore, in total you earned
     {{ player.output|c|floatformat:0 }} tokens. <br>
-    Your earnings from time in switch mode in total are {{ player.outputinswitch|c|floatformat:0 }} tokens. <br>
-    <b>Your total earnings in the game are therefore {{ player.totaloutput|c|floatformat:0 }} tokens.</b> <br>
+    Your earnings from time in switch mode in total are {{ player.outputinswitch|c|floatformat:1 }} tokens. <br>
+    <b>Your total earnings in the game are therefore {{ player.totaloutput|c|floatformat:1 }} tokens.</b> <br>
   </div>
 </div>
 

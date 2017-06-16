@@ -10,19 +10,11 @@
 <div class="panel panel-primary">
   <div class="panel-heading">Your earnings from this round:</div>
   <div class="panel-body">
-    You solved {{ player.output2 }} sequences which earns you <strong>{{ player.output2|c }}</strong> Tokens.<br>
-    You spent {{player.timeinswitcht2}} seconds in the <em>switch mode</em> which earns you <strong>{{player.outputinswitch2|c}}</strong> Tokens.<br><br>
-    Your total earnings in this round are therefore <strong>{{player.totaloutput2|c}}</strong> Tokens. <br>
+    You solved {{ player.output2|floatformat:0 }} sequences which earns you <strong>{{ player.output2|c|floatformat:0 }}</strong> Tokens.<br>
+    You spent {{player.timeinswitcht2}} seconds in the <em>switch mode</em> which earns you <strong>{{player.outputinswitch2|c|floatformat:1}}</strong> Tokens.<br><br>
+    Your total earnings in this round are therefore <strong>{{player.totaloutput2|c|floatformat:1}}</strong> Tokens. <br>
   </div>
 </div>
-
-<!--   <p>
-        In this round you solved {{ player.output2 }} sequences which earns you <strong>{{ player.output2|c }}</strong> Tokens.<br>
-        You spent {{player.timeinswitcht2}} seconds in the <em>switch mode</em> which earns you <strong>{{player.outputinswitch2|c}}</strong> Tokens.
-    </p>
-    <p>
-        Your total earnings of this round are therefore <strong>{{player.totaloutput2|c}}</strong> Tokens.
-    </p>  -->
 
 {% next_button %}
 

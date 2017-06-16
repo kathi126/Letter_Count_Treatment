@@ -52,8 +52,8 @@ padding: 1em;
   <div class="panel-body">
     {{ player.output3|floatformat:0 }} strings. Therefore, in this period you earned
     {{ player.output3|c|floatformat:0 }} tokens. <br>
-     For the time spent in switch mode in this period you earned: {{ player.outputinswitch3|c|floatformat:0 }} tokens. <br>
-    <b>Your total earnings in this period are therefore: {{ player.totaloutput3|c|floatformat:0 }} tokens.</b> <br>
+     For the time spent in switch mode in this period you earned: {{ player.outputinswitch3|c|floatformat:1 }} tokens. <br>
+    <b>Your total earnings in this period are therefore: {{ player.totaloutput3|c|floatformat:1 }} tokens.</b> <br>
   </div>
 </div>
 
