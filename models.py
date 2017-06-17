@@ -175,6 +175,7 @@ class Group(BaseGroup):
                 p.letter = 'E'
 
 class Player(BasePlayer):
+    pay = models.FloatField()
     letter = models.CharField()
     luck = models.PositiveIntegerField(
         choices=[
@@ -565,3 +566,5 @@ class Player(BasePlayer):
 
     def set_output(self):
         self.output = self.output1 + self.output2 + self.output3 + self.output4 + self.output5 + self.output6 + self.output7 + self.output8
+        self.totaloutput = self.totaloutput1 + self.totaloutput2 + self.totaloutput3 + self.totaloutput4 + self.totaloutput5 + self.totaloutput6 + self.totaloutput7 + self.totaloutput8
+        self.pay = self.totaloutput * Constants.eurosper_token
