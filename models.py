@@ -25,7 +25,6 @@ class Constants(BaseConstants):
     num_rounds = 1
 
     t = 20
-    tf = 400
     tokensper_string = c(1)
     eurosper_token = 0.10
     secondsper_token = 10
@@ -565,4 +564,4 @@ class Player(BasePlayer):
         self.totaloutput2 = self.output2 + self.outputinswitch2
 
     def set_output(self):
-        self.output = self.output0 + self.output1 + self.output2 + self.output3 + self.output4 + self.output5 + self.output6 + self.output7 + self.output8 - 5
+        self.output = self.output1 + self.output2 + self.output3 + self.output4 + self.output5 + self.output6 + self.output7 + self.output8
