@@ -566,5 +566,6 @@ class Player(BasePlayer):
 
     def set_output(self):
         self.output = self.output1 + self.output2 + self.output3 + self.output4 + self.output5 + self.output6 + self.output7 + self.output8
+        self.outputinswitch = self.outputinswitch1 + self.outputinswitch2 + self.outputinswitch3 + self.outputinswitch4 + self.outputinswitch5 + self.outputinswitch6 + self.outputinswitch7 + self.outputinswitch8
         self.totaloutput = self.totaloutput1 + self.totaloutput2 + self.totaloutput3 + self.totaloutput4 + self.totaloutput5 + self.totaloutput6 + self.totaloutput7 + self.totaloutput8
         self.pay = self.totaloutput * Constants.eurosper_token
