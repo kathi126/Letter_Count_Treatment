@@ -25,7 +25,6 @@ class Constants(BaseConstants):
     num_rounds = 1
 
     t = 20
-    tf = 400
     tokensper_string = c(1)
     eurosper_token = 0.10
     secondsper_token = 10
@@ -176,6 +175,7 @@ class Group(BaseGroup):
                 p.letter = 'E'
 
 class Player(BasePlayer):
+    pay = models.FloatField()
     letter = models.CharField()
     luck = models.PositiveIntegerField(
         choices=[
@@ -565,4 +565,7 @@ class Player(BasePlayer):
         self.totaloutput2 = self.output2 + self.outputinswitch2
 
     def set_output(self):
-        self.output = self.output0 + self.output1 + self.output2 + self.output3 + self.output4 + self.output5 + self.output6 + self.output7 + self.output8 - 5
+        self.output = self.output1 + self.output2 + self.output3 + self.output4 + self.output5 + self.output6 + self.output7 + self.output8
+        self.outputinswitch = self.outputinswitch1 + self.outputinswitch2 + self.outputinswitch3 + self.outputinswitch4 + self.outputinswitch5 + self.outputinswitch6 + self.outputinswitch7 + self.outputinswitch8
+        self.totaloutput = self.totaloutput1 + self.totaloutput2 + self.totaloutput3 + self.totaloutput4 + self.totaloutput5 + self.totaloutput6 + self.totaloutput7 + self.totaloutput8
+        self.pay = self.totaloutput * Constants.eurosper_token
