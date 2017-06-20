@@ -7,8 +7,9 @@
     Your Beliefs
 {% endblock %}
 
-
-
+{% block styles %}
+    <link href="{% static "project2treat/css/Belief.css" %}" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
 
@@ -21,9 +22,9 @@ Please answer the following questions:
 
     <br>
 
-   <li> {% formfield player.mostprodATbelief7 with label="How many sequences do you think will the most productive member of your group solve in this period, if her or she got the <u> advanced technology</u>?" %} </li>
+   <li> {% formfield player.mostprodATbelief7 with label="How many sequences do you think will the most productive member of your group solve in this period, if her or she got the <em><strong> advanced technology</strong></em>?" %} </li>
 
-    <li> {% formfield player.mostprodBTbelief7 with label="How many sequences do you think will the most productive member of your group solve in this period, if her or she got the <u> basic technology</u>?" %} </li>
+    <li> {% formfield player.mostprodBTbelief7 with label="How many sequences do you think will the most productive member of your group solve in this period, if her or she got the <em><strong> basic technology</strong></em>?" %} </li>
 
 </ol>
 
