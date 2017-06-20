@@ -136,6 +136,7 @@ class Group(BaseGroup):
             p.timeinswitch8 = p.switch8 * (Constants.t - p.switchtime8)
             p.outputinswitch8 = p.timeinswitch8 / 10
             p.totaloutput8 = p.output8 + p.outputinswitch8
+            p.set_output()
 
     def set_pc3(self):
         for p in self.get_players():
