@@ -272,6 +272,7 @@ class Player(BasePlayer):
     switchtime6 = models.PositiveIntegerField(default=0)
     switchtime7 = models.PositiveIntegerField(default=0)
     switchtime8 = models.PositiveIntegerField(default=0)
+    timeinswitch = models.PositiveIntegerField(default=0)
     timeinswitch1 = models.PositiveIntegerField(default=0)
     timeinswitch2 = models.PositiveIntegerField(default=0)
     timeinswitch3 = models.PositiveIntegerField(default=0)
@@ -568,4 +569,5 @@ class Player(BasePlayer):
         self.output = self.output1 + self.output2 + self.output3 + self.output4 + self.output5 + self.output6 + self.output7 + self.output8
         self.outputinswitch = self.outputinswitch1 + self.outputinswitch2 + self.outputinswitch3 + self.outputinswitch4 + self.outputinswitch5 + self.outputinswitch6 + self.outputinswitch7 + self.outputinswitch8
         self.totaloutput = self.totaloutput1 + self.totaloutput2 + self.totaloutput3 + self.totaloutput4 + self.totaloutput5 + self.totaloutput6 + self.totaloutput7 + self.totaloutput8
+        self.timeinswitch = self.timeinswitch1 + self.timeinswitch2 + self.timeinswitch3 + self.timeinswitch4 + self.timeinswitch5 + self.timeinswitch6 + self.timeinswitch7 + self.timeinswitch8
         self.pay = self.totaloutput * Constants.eurosper_token

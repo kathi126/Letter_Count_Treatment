@@ -50,8 +50,8 @@ padding: 1em;
 <div class="panel panel-primary">
   <div class="panel-heading"> Your total earnings from the experiment: </div>
   <div class="panel-body">
-    You solved in total {{ player.ouput|floatformat:0 }} sequences which earns you <strong>{{ player.output|c|floatformat:0 }}</strong> Tokens. <br>
-    Your total time spent in the <em>switch mode</em> earns you <strong>{{ player.outputinswitch|c|floatformat:1 }}</strong> Tokens. <br><br>
+    You solved {{ player.ouput|floatformat:0 }} sequences in total which earns you <strong>{{ player.output|c|floatformat:0 }}</strong> Tokens. <br>
+    You spent {{ player.timeinswitch }} seconds in the <em>switch mode</em> in total which earns you <strong>{{ player.outputinswitch|c|floatformat:1 }}</strong> Tokens. <br><br>
     Your total earnings from the experiment are therefore: <strong>{{ player.totaloutput|c|floatformat:1 }}</strong> Tokens. <br>
   </div>
 </div>
