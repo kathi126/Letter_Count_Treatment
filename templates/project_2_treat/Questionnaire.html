@@ -76,6 +76,66 @@ Please answer the following questions:
 
 <br>
 
+        <p>
+    <li> On a scale from 1 to 10 (1 being "not at all" and 10 being "exclusively") </li>
+    {{ form.effort.errors }}<!-- This allows oTree to show an error message, if no button is selected -->
+
+    <!-- make sure "skill" is defined in your models.py and this page appears as a "form" in views.py" -->
+
+    <!-- The following defines the a group of choices -->
+    <div class="form-group required">
+
+
+                    <label class="control-label"
+                           for="id_effort">How important do you think <u>effort</u> was to achieve high overall earnings?
+
+                    </label>
+
+                    <div class="controls  field-effort">
+
+     <!-- The following defines how the choices are shown -->
+
+    <div class="controls  field-effort">
+    <label class="btn btn-info" for="id_effort_1">Not at all <input type="radio" id="id_effort_1" value="1" name="effort" required> </label>
+
+    <label class="btn btn-info" for="id_effort_2"><input type="radio" id="id_effort_2" value="2" name="effort" required> </label>
+
+    <label class="btn btn-info" for="id_effort_3"><input type="radio" id="id_effort_3" value="3" name="effort"wo required> </label>
+
+    <label class="btn btn-info" for="id_effort_4"><input type="radio" id="id_effort_4" value="4" name="effort" required>  </label>
+
+    <label class="btn btn-info" for="id_effort_5"><input type="radio" id="id_effort_5" value="5" name="effort" required>  </label>
+
+    <label class="btn btn-info" for="id_effort_6"><input type="radio" id="id_effort_6" value="6" name="effort" required>  </label>
+
+    <label class="btn btn-info" for="id_effort_7"><input type="radio" id="id_effort_7" value="7" name="effort" required>  </label>
+
+    <label class="btn btn-info" for="id_effort_8"><input type="radio" id="id_effort_8" value="8" name="effort" required>  </label>
+
+    <label class="btn btn-info" for="id_effort_9"><input type="radio" id="id_effort_9" value="9" name="effort" required>  </label>
+
+    <label class="btn btn-info" for="id_effort_10">  <input type="radio" id="id_effort_10" value="10" name="effort" required> Exclusively </label>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div><!--- .controls -->
+
+
+        </div><!--- .form-group -->
+
+
+
+</p>
+
 <p>
 
 <li> On a scale from 1 to 10 (1 being "not at all" and 10 being "exclusively") </li>

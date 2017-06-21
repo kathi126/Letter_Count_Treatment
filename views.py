@@ -162,7 +162,7 @@ class Competition_Instructions_3(Page):
 
 class Questionnaire(Page):
     form_model = models.Player
-    form_fields = ['luck', 'skill']
+    form_fields = ['luck', 'effort','skill']
 
 class Thank_you(Page):
     pass

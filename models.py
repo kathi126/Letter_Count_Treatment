@@ -180,19 +180,35 @@ class Player(BasePlayer):
     letter = models.CharField()
     luck = models.PositiveIntegerField(
         choices=[
-            [1, 'Not at all'],
-            [2, ''],
-            [3, ''],
-            [4, ''],
-            [5, ''],
-            [6, ''],
-            [7, ''],
-            [8, ''],
-            [9, ''],
-            [10, ''],
+            [1, '1'],
+            [2, '2'],
+            [3, '3'],
+            [4, '4'],
+            [5, '5'],
+            [6, '6'],
+            [7, '7'],
+            [8, '8'],
+            [9, '9'],
+            [10, '10'],
         ],
         widget=widgets.RadioSelectHorizontal()
     )
+    effort = models.PositiveIntegerField(
+        choices=[
+            [1, '1'],
+            [2, '2'],
+            [3, '3'],
+            [4, '4'],
+            [5, '5'],
+            [6, '6'],
+            [7, '7'],
+            [8, '8'],
+            [9, '9'],
+            [10, '10'],
+        ],
+        widget=widgets.RadioSelectHorizontal()
+    )
+
     skill = models.PositiveIntegerField(
         choices=[
             [1, '1'],
