@@ -24,7 +24,7 @@ class Constants(BaseConstants):
     players_per_group = 5
     num_rounds = 1
 
-    t = 20
+    t = 240
     tokensper_string = c(1)
     eurosper_token = 0.10
     secondsper_token = 10
