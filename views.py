@@ -704,7 +704,6 @@ class Round8a(Page):
     def before_next_page(self):
         if self.player.output8 == 0:
             self.player.output8 = 0.0000001
-        self.player.set_output()
 
 class Round8b(Page):
     timeout_seconds = Constants.t
